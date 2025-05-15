@@ -4,9 +4,7 @@ import com.restTK.model.Vehicle;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * ParkingLot manages vehicles parked inside.
- */
+//
 public class ParkingLot {
     private int capacity;
     private List<Vehicle> parkedVehicles;
@@ -17,12 +15,12 @@ public class ParkingLot {
     }
 
     public boolean parkVehicle(Vehicle vehicle) {
-        if (parkedVehicles.size() < capacity) {
+        if (parkedVehicles.size() < capacity) { //verify
             parkedVehicles.add(vehicle);
             System.out.println("Vehicle " + vehicle.getLicensePlate() + " parked.");
             return true;
         } else {
-            System.out.println("Parking full! Cannot park " + vehicle.getLicensePlate());
+            System.out.println("Parking full!  " + vehicle.getLicensePlate());
             return false;
         }
     }

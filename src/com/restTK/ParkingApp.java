@@ -6,7 +6,7 @@ import com.restTK.service.ParkingLot;
 
 public class ParkingApp {
     public static void main(String[] args) {
-        ParkingLot lot = new ParkingLot(3);
+        ParkingLot lot = new ParkingLot(3); //object with 3 vehicles
 
         Car car1 = new Car("TM 45 DRE");
         Motorcycle moto1 = new Motorcycle("MOTO O7");
@@ -16,16 +16,17 @@ public class ParkingApp {
         lot.parkVehicle(moto1);
         lot.parkVehicle(car2);
 
-        lot.listVehicles();
+        lot.listVehicles(); //display all vehicles
 
-        System.out.println();
+        System.out.println(); //esthetics
 
         System.out.println("Parking fee for car1 (3 hours): $" + car1.calculateParkingFee(3));
         System.out.println("Parking fee for moto1 (3 hours): $" + moto1.calculateParkingFee(3));
+        System.out.println("Parking fee for car2 (4 hours): $" + car2.calculateParkingFee(4));
 
         System.out.println();
 
-        lot.removeVehicle("MOTO1");
+        lot.removeVehicle("MOTO O7");
         lot.listVehicles();
     }
 }

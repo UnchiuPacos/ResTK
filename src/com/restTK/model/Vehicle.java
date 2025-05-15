@@ -1,7 +1,6 @@
 package com.restTK.model;
 
 // abstract class vehicle
-
 public abstract class Vehicle {
     private String licensePlate;
 
@@ -13,7 +12,7 @@ public abstract class Vehicle {
         return licensePlate;
     }
 
-    // abstract method to be implemented in subclasses (polymorphism)
+    // abstract method to be implemented in subclasses poly
     public abstract double calculateParkingFee(int hours);
 
     public void displayInfo() {
